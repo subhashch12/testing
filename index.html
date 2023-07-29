@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(to right, #feca57, #ff4757)
+
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .box button {
+      background:  linear-gradient(to right, #6c5ce7, #f53b57);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .box button:hover {
+      background: linear-gradient(to right, #2ecc71, #1abc9c)
+
+    }
+
+    .box p {
+      font-size: 14px;
+      margin-top: 0;
+    }
+    .marquee {
+      font-weight: bold;
+    }
+  </style>
+  <marquee class="marquee">This Website is showcasing various Python projects!</marquee></head>
+<body>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search...">
+  </div>
+  <div class="grid">
+    <div class="box">
+      <img src="img\combinepdf.svg" alt="Image 1">
+      <p>Merging PDF via python </p>
+      <button onclick="window.location.href='src/ppp.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/p2p.svg" alt="Image 2">
+      <p>Generating pdf via python</p>
+      <button onclick="window.location.href='src/p2p.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/p2q.svg" alt="Image 3">
+      <p>Creating Qrcode via python</p>
+      <button onclick="window.location.href='src/p2p.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/p2s.svg" alt="Image 4">
+      <p>Creating Scattering points via python</p>
+      <button onclick="window.location.href='src/p2s.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/speedtest.svg" alt="Image 5">
+      <p>Checking the Internet speed via python</p>
+      <button onclick="window.location.href='src/net_speed.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/w2b.svg" alt="Image 5">
+      <p>Changing colour photo to black and white via python</p>
+      <button onclick="window.location.href='src/w2b.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/i2t.svg" alt="Image 5">
+      <p>Image to text via Python  </p>
+      <button onclick="window.location.href='src/i2p.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/ip.svg" alt="Image 8">
+      <p>Obtaining the IP address of the computer by  python</p>
+      <button onclick="window.location.href='src/ip.html'" download>Download</button>
+    </div>
+    <div class="box">
+      <img src="img/mailp.svg" alt="Image 9">
+      <p>Sending mail by Python</p>
+      <button onclick="window.location.href='src/p2e.html'" download>Download</button>
+    </div>
+  <div class="box">
+    <img src="img/p2pie.svg" alt="Image 5">
+    <p>Image to text via Python  </p>
+    <button onclick="window.location.href='src/p2pie.html'" download>Download</button>
+  </div>
+  <div class="box">
+    <img src="img/p2bar.svg" alt="Image 8">
+    <p>Converting the given data into the bar graph by python</p>
+    <button onclick="window.location.href='src/psb.html'" download>Download</button>
+  </div>
+  <div class="box">
+    <img src="img/chatbot.svg" alt="Image 9">
+    <p>A simple chat bot python</p>
+    <button onclick="window.location.href='src/chat.html'" download>Download</button>
+  </div>
+  <div class="box">
+    <img src="img/encrptionpdf.svg" alt="Image 5">
+    <p>PDF encryption by python  </p>
+    <button onclick="window.location.href='src/PdfEncryption.html'" download>Download</button>
+  </div>
+  <div class="box">
+    <img src="img/extractdata.svg" alt="Image 8">
+    <p>Extracting the data from the Excel by python</p>
+    <button onclick="window.location.href='src/extractdata.html'" download>Download</button>
+  </div>
+  <div class="box">
+    <img src="img/wp.png" alt="Image 9">
+    <p>Sending Whatsapp message via python</p>
+    <button onclick="window.location.href='src/wp.html'" download>Download</button>
+  </div>
+</div>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const boxes = Array.from(document.getElementsByClassName('box'));
+
+    searchInput.addEventListener('input', function () {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      boxes.forEach(function (box) {
+        const description = box.querySelector('p').textContent.toLowerCase();
+
+        if (description.includes(searchTerm)) {
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
